@@ -87,12 +87,12 @@
             </VisualStateManager.VisualStateGroups>
             <StackPanel x:Name="FolderPicker">
                 <Button x:Name="FolderPickButton" Content="选择源数据文件夹" HorizontalAlignment="Stretch" Click="OpenFolderRequested"/>
-                
+
                 <Border Margin="0,8,0,0" Padding="0,32" AllowDrop="True" Drop="OnFolderDrop" CornerRadius="4" Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}">
                     <TextBlock HorizontalAlignment="Center" Text="或将文件夹拖拽至此处" Style="{StaticResource BodyTextBlockStyle}"/>
                 </Border>
             </StackPanel>
-            
+
             <ComboBox 
                 x:Name="MapSelectComboBox" 
                 HorizontalAlignment="Stretch" 
@@ -101,12 +101,6 @@
                 ItemsSource="{Binding ExcelSplitView.TextMapCollection}" SelectedItem="{Binding ExcelSplitView.SelectedTextMap,Mode=TwoWay}"/>
             <Rectangle x:Name="Separator2" Height="12"/>
             <Button x:Name="ConfirmButton" Click="OnConfirmed" Content="确定" HorizontalAlignment="Stretch"/>
-        </StackPanel>
-        <StackPanel Margin="32" VerticalAlignment="Bottom" HorizontalAlignment="Center">
-            
-            <ui:HyperlinkButton HorizontalAlignment="Center" Content="Snap Genshin App系列" NavigateUri="https://github.com/DGP-Studio/Snap.Genshin"/>
-            <TextBlock HorizontalAlignment="Center" Text="如果您使用我们的App获取信息并发布" Style="{StaticResource BodyTextBlockStyle}"/>
-            <TextBlock HorizontalAlignment="Center" Text="我们希望您在发布的内容中包括此链接" Style="{StaticResource BodyTextBlockStyle}"/>
         </StackPanel>
     </Grid>
 </UserControl>

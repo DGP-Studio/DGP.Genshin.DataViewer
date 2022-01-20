@@ -16,14 +16,14 @@ namespace DGP.Genshin.DataViewer.Services
 
         public static string GetMappedTextBy(string str)
         {
-            return TextMap != null && TextMap.TryGetValue(str, out string? result) ? ProcessStringFormat(result) : str;
+            return TextMap != null && TextMap.TryGetValue(str, out string? result) ? RemoveHtmlFormat(result) : str;
         }
         public static string GetMappedNPCBy(string id)
         {
             return NPCMap != null && NPCMap.Value.TryGetValue(id, out string? result) ? GetMappedTextBy(result) : id;
         }
 
-        public static string ProcessStringFormat(string s)
+        public static string RemoveHtmlFormat(string s)
         {
             //match the format required string
             if (s.StartsWith("#"))

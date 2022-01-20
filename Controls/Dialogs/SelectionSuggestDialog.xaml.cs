@@ -1,9 +1,8 @@
-﻿namespace DGP.Genshin.DataViewer.Controls.Dialogs
+﻿using ModernWpf.Controls;
+
+namespace DGP.Genshin.DataViewer.Controls.Dialogs
 {
-    /// <summary>
-    /// SelectionSuggestDialog.xaml 的交互逻辑
-    /// </summary>
-    public partial class SelectionSuggestDialog : ModernWpf.Controls.ContentDialog
+    public partial class SelectionSuggestDialog : ContentDialog
     {
         public SelectionSuggestDialog()
         {
